@@ -1,0 +1,140 @@
+body {
+    padding: 0;
+    font-family: helvetica, arial, sans-serif;
+}
+
+#buttondiv{
+  padding: 10px;
+  margin-top:5px;
+}
+
+#timegraph{
+  font-weight: bold;
+}
+
+.Canclass {
+  height:200px;
+  width:200px;
+  margin: 0px;
+  padding: 0px;
+}
+.graphT{
+  height:150px;
+  width:100%;
+  margin: 0px;
+  margin-bottom:15px;
+  padding: 0px;
+}
+
+
+.graphC{
+  height:200px;
+  width:200px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.listC{
+  width:250px;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+}
+
+.map {
+    width: 100%;
+    height: 250px;
+}
+
+.content {
+    width: 100%;
+}
+
+div.cartodb-popup.v2 div.cartodb-popup-content-wrapper{
+  width:240px;
+}
+
+#tweetAllMapButton{
+  background-color:#000066;
+  border-color:#000066;
+}
+
+#tweetLateAfterNoonMapButton{
+  background-color:#660066;
+  border-color:#660066;
+}
+
+#tweetEveningMapButton{
+  background-color: #4d0066;
+  border-color:#4d0066;
+
+}
+
+#tweetLateNightMapButton{
+  background-color: black;
+  border-color:black;
+
+}
+
+.barListElement{
+  color:black;
+  font-weight: bold;
+  padding:2px;
+  border-radius:5px;
+  margin:2px;
+  border-color: black;
+  border-width: 2px;
+  border-style:solid;
+}
+
+#happybar0{
+  background-color:#FFD000
+}
+
+#happybar1{
+  background-color:#FFA600
+}
+
+#happybar2{
+  background-color:#FF8000
+}
+
+#happybar3{
+  background-color:#FF4D00
+}
+
+#happybar4{
+  background-color:#FF0000
+}
+
+#sadbar0{
+  background-color:#C000FF
+}
+
+#sadbar1{
+  background-color:#8400FF
+}
+
+#sadbar2{
+  background-color:#6200FF
+}
+
+#sadbar3{
+  background-color:#2600FF
+}
+
+#sadbar4{
+  background-color:#0D00FF
+}
+
+tbody tr{
+  height:250px;
+}
+
+#mainDiv{
+  position: absolute;
+  top:215px;
+  width:100%;
+}

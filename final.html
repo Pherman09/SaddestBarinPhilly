@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div id="timegraph" class="graphT text-center">
+        Tweet Volume Over Time
+        <canvas id="myTimeChart" width=100%height=100%></canvas>
+      </div>
+      <div id="buttondiv" class="text-center">
+        <button id="tweetAllMapButton" class="btn btn-primary timeButton">Map All Tweets</button>
+        <button id="tweetLateAfterNoonMapButton" class="btn btn-primary timeButton">Map Late Afternnon Tweets</button>
+        <button id="tweetEveningMapButton" class="btn btn-primary timeButton">Map Evening Tweets</button>
+        <button id="tweetLateNightMapButton" class="btn btn-primary timeButton">Map Late Night Tweets</button>
+      </div>
+    </div>
+    <div id="mainDiv">
+    <div id="map" class="map"></div>
+    <!--content-->
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+      <!--Graphs Table-->
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Bar List
+                  </th>
+                  <th>Bar Stats
+                  </th>
+                  <th>Tweet Stats
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div id="happyBarsList" class="col-xs-12 col-sm-6 col-md-8 listC text-center">Top Five Happiest Bars</div>
+                  </td>
+                  <td>
+                    <div id="happygraph" class="col-xs-12 col-sm-6 col-md-8 graphC text-center"> Number of Tweets at Happiest Bars
+                      <canvas id="myHappyChart" class="Canclass" width=100% height=100%></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div id="donutBox"class="col-xs-12 col-sm-6 col-md-8 graphC text-center"> Happy/Sad Tweets Ratio
+                      <canvas id="myDonutChart" class="Canclass" width=100% height=100%></canvas>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div id="sadBarsList" class="col-xs-12 col-sm-6 col-md-8 listC text-center"> Top Five Saddest Bars</div>
+                  </td>
+                  <td>
+                    <div id="sadgraph" class="col-xs-12 col-sm-6 col-md-8 graphC text-center"> Number of Tweets at Saddest Bars
+                      <canvas id="mySadChart" class="Canclass" width=100% height=100%></canvas>
+                    </div>
+                  </td>
+                  <td>
+                    <div id="freqgraph"class="col-xs-12 col-sm-6 col-md-8 graphC text-center"> Trending Topics
+                      <canvas id="myFreqChart"class="Canclass"  width=100% height=100%></canvas>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Javascript Imports -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/negativewords.js"></script>
+    <script src="js/positivewords.js"></script>
+    <script src="js/commonwords.js"></script>
+    <script src="js/setupDB.js"></script>
+    <script src="js/funcsDB.js"></script>
+  </body>
+</html>
