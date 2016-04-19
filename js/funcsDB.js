@@ -331,7 +331,7 @@ var clearAll = function(){
   clearGraphDiv("happygraph","myHappyChart");
   clearGraphDiv("freqgraph","myFreqChart");
   clearGraphDiv("timegraph","myTimeChart");
-
+  $("#descrip").remove();
 
   //Clear and Recreate Bar Lists
   var clearBarList = function(string){
