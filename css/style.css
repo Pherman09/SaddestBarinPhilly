@@ -135,6 +135,15 @@ tbody tr{
 
 #mainDiv{
   position: absolute;
-  top:215px;
+  top:245px;
   width:100%;
+}
+
+#legend{
+  font-weight:bold;
+}
+
+.legBlock{
+  border-style:solid;
+  border-width:2px;
 }
