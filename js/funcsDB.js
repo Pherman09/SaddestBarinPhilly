@@ -268,6 +268,9 @@ var populateBarDiv = function(barArray,buffers,string,jqueryPoint){
     $(querycall).click(function() {
       var pointOfInterest =_.filter(buffers,function(bar) { return bar.locName === bName;});
       L.geoJson(pointOfInterest[0]).addTo(map);
+      var bLat = pointOfInterest[0].features[0].geometry.coordinates[0][0][0];
+      var bLong = pointOfInterest[0].features[0].geometry.coordinates[0][0][1];
+      map.setView([bLong,bLat], 15);
     });
     i = i+1;
   });
@@ -314,6 +317,7 @@ var buildTimeGraph = function(tweets,jqueryPoint,timeArray,labelArray,colorStrin
 
 //Clear Map button
 var clearAll = function(){
+
   //Clear Maps
   map.eachLayer(function (layer) {
     map.removeLayer(layer);
@@ -361,7 +365,8 @@ var clearAll = function(){
 };
 
 //Execution
-var setAll = function(tweets1,bars1,colorT){//need two more field values here, time list and colorofbutton
+var setAll = function(tweets1,bars1,colorT){
+  $(".load").show();
   clearAll();
   tweetText(tweets1);
   moodSet(tweets1);
@@ -386,6 +391,7 @@ var setAll = function(tweets1,bars1,colorT){//need two more field values here, t
   populateBarDiv(sadFirst,BUFFERLIST,"sad","#sadBarsList");
   buildTimeGraph(tweets1,"#myTimeChart",["16","17","18","19","20","21","22","23","0","1","2","3","4"],
   ["4:00 PM","5:00 PM","6:00 PM","7:00 PM","8:00 PM","9:00 PM","10:00 PM","11:00 PM","12:00 AM","1:00 AM","2:00 AM","3:00 AM","4:00 AM"],colorT);
+  $(".load").hide();
 };
 
 $("#tweetAllMapButton").click(function(){
@@ -402,4 +408,8 @@ $("#tweetEveningMapButton").click(function(){
 
 $("#tweetLateNightMapButton").click(function(){
   setAll(tweetsLateNight,bars,"#79777A");
+});
+
+$(document).ready(function(){
+  $(".load").hide();
 });
